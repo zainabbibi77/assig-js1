@@ -1,7 +1,7 @@
 import Link from "next/link";
 import "@/app/globals.css";
 
-export default function CountryName({params}:any) {
+export default function CountryName({params}:{params:{country_name:string}}) {
     
     const countries:{
         name:string,
@@ -40,7 +40,7 @@ export default function CountryName({params}:any) {
 
     }
 
-let result=findCountry(params.country_name)
+const result=findCountry(params.country_name)
 
      return (
     <div>
